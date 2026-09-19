@@ -2,18 +2,18 @@
 <html lang="en">
 
 <!--
-  ╔══════════════════════════════════════════════════════════════════════╗
-  ║         180 DEGREES CONSULTING  -  IIT KHARAGPUR WEBSITE              ║
-  ╠══════════════════════════════════════════════════════════════════════╣
-  ║  QUICK GUIDE FOR FUTURE BATCHES:                                    ║
-  ║  • To change COLOURS     → find :root { } around line 29            ║
-  ║  • To change STATS       → search "data-to" or "data-fmt"           ║
-  ║  • To update DIRECTORS   → search "dir-grid" (~line 4130)           ║
-  ║  • To update ALUMNI      → search "ac-grid"  (~line 4229)           ║
-  ║  • To update PROJECTS    → search "page-projects" (~line 3078)      ║
-  ║  • To add TEAM PHOTOS    → put jpg in assets/ folder, name matches  ║
-  ║  • All JS logic          → single <script> block near line 4666     ║
-  ╚══════════════════════════════════════════════════════════════════════╝
+  +----------------------------------------------------------------------+
+  �         180 DEGREES CONSULTING  -  IIT KHARAGPUR WEBSITE              �
+  �----------------------------------------------------------------------�
+  �  QUICK GUIDE FOR FUTURE BATCHES:                                    �
+  �  � To change COLOURS     ? find :root { } around line 29            �
+  �  � To change STATS       ? search "data-to" or "data-fmt"           �
+  �  � To update DIRECTORS   ? search "dir-grid" (~line 4130)           �
+  �  � To update ALUMNI      ? search "ac-grid"  (~line 4229)           �
+  �  � To update PROJECTS    ? search "page-projects" (~line 3078)      �
+  �  � To add TEAM PHOTOS    ? put jpg in assets/ folder, name matches  �
+  �  � All JS logic          ? single <script> block near line 4666     �
+  +----------------------------------------------------------------------+
 -->
 
 <head>
@@ -60,10 +60,10 @@
       font-feature-settings: "lnum" 1;
     }
 
-    /* ═══════════════════════════════════════════════════════════════════
+    /* -------------------------------------------------------------------
        COLOUR PALETTE  -  edit these CSS variables to retheme the entire site.
        Every colour used in the design references one of these variables.
-       ─────────────────────────────────────────────────────────────────
+       -----------------------------------------------------------------
        --g   : primary green (buttons, accents)
        --gm  : darker green (hover states)
        --gd  : darkest green (avatar backgrounds)
@@ -76,7 +76,7 @@
        --mut : muted grey-green (secondary text)
        --bdr : border colour (semi-transparent green)
        --tr  : global transition timing (animations)
-       ═══════════════════════════════════════════════════════════════════ */
+       ------------------------------------------------------------------- */
     :root {
       --g: #71a333;
       --gm: #5e8b28;
@@ -92,10 +92,10 @@
       --tr: .32s cubic-bezier(.4, 0, .2, 1)
     }
 
-    /* ═══════════════════════════════════════════════════════════════════
+    /* -------------------------------------------------------------------
        LIGHT MODE  -  toggled by adding class="light" on <html>
-       Pure white backgrounds · near-black text · vivid greens · WCAG AA
-       ═══════════════════════════════════════════════════════════════════ */
+       Pure white backgrounds � near-black text � vivid greens � WCAG AA
+       ------------------------------------------------------------------- */
     html.light {
       --g:   #71a333;
       --gm:  #5e8b28;
@@ -110,10 +110,10 @@
       --bdr: rgba(113, 163, 51, .2)
     }
 
-    /* ── body & base ─────────────────────────────────────────────────── */
+    /* -- body & base --------------------------------------------------- */
     html.light body { color: var(--w); background: var(--k) }
 
-    /* ── nav ─────────────────────────────────────────────────────────── */
+    /* -- nav ----------------------------------------------------------- */
     html.light nav.scrolled {
       background: rgba(255, 255, 255, .95) !important;
       box-shadow: 0 1px 0 rgba(113, 163, 51, .15), 0 2px 12px rgba(0,0,0,.07)
@@ -140,7 +140,7 @@
     html.light .mob-menu button:hover,
     html.light .mob-menu a:hover { color: var(--g) }
 
-    /* ── hero ────────────────────────────────────────────────────────── */
+    /* -- hero ---------------------------------------------------------- */
     html.light #hero { background: linear-gradient(160deg, #ffffff 60%, #edf7f1 100%) }
     html.light .h-eye { color: var(--g) }
     html.light .h-eye::before { background: var(--g) }
@@ -192,7 +192,7 @@
       background: rgba(113, 163, 51, .06)
     }
 
-    /* ── marquee ─────────────────────────────────────────────────────── */
+    /* -- marquee ------------------------------------------------------- */
     html.light .mq {
       background: #f0f8f3;
       border-color: rgba(113, 163, 51, .25)
@@ -208,7 +208,7 @@
       background: rgba(113, 163, 51,.06)
     }
 
-    /* ── three cards ─────────────────────────────────────────────────── */
+    /* -- three cards --------------------------------------------------- */
     html.light .three { background: var(--k2); border-top-color: rgba(0,0,0,.07) }
     html.light .tcard {
       background: #fff;
@@ -225,7 +225,7 @@
     html.light .tbtn { color: var(--g) }
     html.light .tbtn:hover { color: #0a1a0d }
 
-    /* ── award ───────────────────────────────────────────────────────── */
+    /* -- award --------------------------------------------------------- */
     html.light #award-section { background: var(--k) }
     html.light .award-card {
       background: linear-gradient(135deg, #fff, #edf7f1);
@@ -250,7 +250,7 @@
       border-color: rgba(0,0,0,.08)
     }
 
-    /* ── companies ───────────────────────────────────────────────────── */
+    /* -- companies ----------------------------------------------------- */
     html.light #companies { background: var(--k3) }
     html.light .co-chip {
       background: #fff;
@@ -259,7 +259,7 @@
     }
     html.light .co-chip:hover { background: rgba(113, 163, 51,.08); border-color: var(--g) }
 
-    /* ── impact ──────────────────────────────────────────────────────── */
+    /* -- impact -------------------------------------------------------- */
     html.light #impact { background: var(--k2) }
     html.light #impact::before { background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(113, 163, 51,.06), transparent 70%) }
     html.light .imp-grid {
@@ -273,7 +273,7 @@
     html.light .in { color: #0a1a0d; text-shadow: none }
     html.light .il { color: #3d5c47 }
 
-    /* ── blogs ───────────────────────────────────────────────────────── */
+    /* -- blogs --------------------------------------------------------- */
     html.light #blogs { background: var(--k) }
     html.light .bc {
       background: #fff;
@@ -291,7 +291,7 @@
     html.light .cbt:hover { border-color: var(--g); color: var(--g) }
     html.light .cdot { background: rgba(0,0,0,.15) }
 
-    /* ── CTA strip ───────────────────────────────────────────────────── */
+    /* -- CTA strip ----------------------------------------------------- */
     html.light .cta {
       background: var(--k2);
       border-color: rgba(113, 163, 51,.2)
@@ -301,7 +301,7 @@
     html.light .ssub { color: #2d4a35 }
     html.light .slbl { color: var(--g) }
 
-    /* ── services ────────────────────────────────────────────────────── */
+    /* -- services ------------------------------------------------------ */
     html.light .sc {
       background: #fff;
       border-color: rgba(0,0,0,.1);
@@ -323,7 +323,7 @@
     html.light .ficon { border-color: rgba(0,0,0,.15); color: #3d5c47 }
     html.light .fa { color: #3d5c47 }
 
-    /* ── projects ────────────────────────────────────────────────────── */
+    /* -- projects ------------------------------------------------------ */
     html.light .pp { background: var(--k) }
     html.light .map-wrap {
       background: #fff;
@@ -363,7 +363,7 @@
     html.light .submap-info h4 { color: #0a1a0d }
     html.light .submap-info p { color: #3d5c47 }
 
-    /* ── team ────────────────────────────────────────────────────────── */
+    /* -- team ---------------------------------------------------------- */
     html.light .tp { background: var(--k) }
     html.light .dc {
       background: #fff;
@@ -392,7 +392,7 @@
     html.light .ac-name { color: #0a1a0d }
     html.light .ac-av { background: #d8ead0; border-color: rgba(113, 163, 51,.3) }
 
-    /* ── testimonials ────────────────────────────────────────────────── */
+    /* -- testimonials -------------------------------------------------- */
     html.light .test-card {
       background: #fff;
       border-color: rgba(0,0,0,.1);
@@ -409,7 +409,7 @@
     html.light .test-cta h3 { color: #0a1a0d }
     html.light .test-cta p { color: #3d5c47 }
 
-    /* ── contact ─────────────────────────────────────────────────────── */
+    /* -- contact ------------------------------------------------------- */
     html.light .cp { background: var(--k) }
     html.light .ci-icon { background: rgba(113, 163, 51,.1) }
     html.light .ci-item h4 { color: #3d5c47 }
@@ -442,7 +442,7 @@
     }
     html.light .fg select option { background: #fff; color: #0f1a12 }
 
-    /* ── resources ───────────────────────────────────────────────────── */
+    /* -- resources ----------------------------------------------------- */
     html.light .rp { background: var(--k) }
     html.light .rc {
       background: #fff;
@@ -455,7 +455,7 @@
     html.light .rc-link { color: var(--g) }
     html.light .rc-preview { background: linear-gradient(135deg, #f0f7e6, #ebf5ef); border-bottom-color: rgba(0,0,0,.08) }
 
-    /* ── footer ──────────────────────────────────────────────────────── */
+    /* -- footer -------------------------------------------------------- */
     html.light footer {
       background: #ebf5ef;
       border-top-color: rgba(113, 163, 51,.2)
@@ -471,7 +471,7 @@
     html.light .fts { border-color: rgba(0,0,0,.15); color: #3d5c47 }
     html.light .fts:hover { border-color: var(--g); color: var(--g) }
 
-    /* ── toasts ──────────────────────────────────────────────────────── */
+    /* -- toasts -------------------------------------------------------- */
     html.light .toast-card {
       background: #fff;
       border-color: rgba(0,0,0,.1);
@@ -482,7 +482,7 @@
     html.light .toast-close { color: #8aaa95 }
     html.light .toast-close:hover { color: #0a1a0d }
 
-    /* ── logo in light mode ──────────────────────────────────────────── */
+    /* -- logo in light mode -------------------------------------------- */
     html.light .nav-logo img { filter: none; mix-blend-mode: normal }
 
 
@@ -832,9 +832,9 @@
       transition-delay: .3s
     }
 
-    /* ═══════════════════════════════════════════════════════════════════
+    /* -------------------------------------------------------------------
        MOBILE OPTIMIZED ERROR & TOAST SYSTEM
-       ═══════════════════════════════════════════════════════════════════ */
+       ------------------------------------------------------------------- */
     .toast-container {
       position: fixed;
       z-index: 10000;
@@ -983,9 +983,9 @@
       animation: fieldShake 0.4s ease;
     }
 
-    /* ──────────────────────────────────────────────
+    /* ----------------------------------------------
    HOME PAGE
-────────────────────────────────────────────── */
+---------------------------------------------- */
     /* HERO */
     #hero {
       min-height: 100vh;
@@ -1158,12 +1158,12 @@
       animation: fu .9s .65s forwards
     }
 
-    /* ═══ HERO STATS ROW (bottom of hero: 1M+, 35+, 1100+, 93%) ════════════
-   .h-stats → the 4-column stats row container
-   .stat    → each individual stat block
-   .snum    → the BIG number   ← CHANGE font-size HERE to resize hero numbers
-   .slbls   → the label text   ← CHANGE font-size HERE to resize hero labels
-   ════════════════════════════════════════════════════════════════════════ */
+    /* --- HERO STATS ROW (bottom of hero: 1M+, 35+, 1100+, 93%) ------------
+   .h-stats ? the 4-column stats row container
+   .stat    ? each individual stat block
+   .snum    ? the BIG number   ? CHANGE font-size HERE to resize hero numbers
+   .slbls   ? the label text   ? CHANGE font-size HERE to resize hero labels
+   ------------------------------------------------------------------------ */
     .h-stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1183,7 +1183,7 @@
       padding-left: 16px
     }
 
-    /* ↓ HERO STAT NUMBER  -  change font-size here */
+    /* ? HERO STAT NUMBER  -  change font-size here */
     .snum {
       font-family: "Cormorant Garamond", serif;
       font-size: 80px !important;
@@ -1209,7 +1209,7 @@
       display: block !important;
     }
 
-    /* ↓ HERO STAT LABEL  -  change font-size here (currently 11px) */
+    /* ? HERO STAT LABEL  -  change font-size here (currently 11px) */
     .slbls {
       font-size: 11px;
       color: rgba(255, 255, 255, .75);
@@ -1221,15 +1221,15 @@
 
 
 
-    /* ═══ HERO RIGHT PANEL  -  animated impact counter showcase ═══════════════
-   .h-panel        → the dark card container on the right side of hero
-   .h-panel-title  → small label at top of panel ("Our Impact")
-   .h-stat-row     → each row (icon + number + label)
-   .h-stat-icon    → the emoji/icon box on the left of each row ← change emoji inside HTML
-   .h-stat-val     → the big animated number ← data-to sets target, data-fmt sets static text
-   .h-stat-lbl     → the description text    ← change text in HTML
-   .h-panel-bar    → the animated progress bar strip at bottom
-   ════════════════════════════════════════════════════════════════════════ */
+    /* --- HERO RIGHT PANEL  -  animated impact counter showcase ---------------
+   .h-panel        ? the dark card container on the right side of hero
+   .h-panel-title  ? small label at top of panel ("Our Impact")
+   .h-stat-row     ? each row (icon + number + label)
+   .h-stat-icon    ? the emoji/icon box on the left of each row ? change emoji inside HTML
+   .h-stat-val     ? the big animated number ? data-to sets target, data-fmt sets static text
+   .h-stat-lbl     ? the description text    ? change text in HTML
+   .h-panel-bar    ? the animated progress bar strip at bottom
+   ------------------------------------------------------------------------ */
     .h-panel {
       background: rgba(255, 255, 255, .02);
       backdrop-filter: blur(12px);
@@ -1287,7 +1287,7 @@
       }
     }
 
-    /* ↓ STAT ROW  -  each metric block */
+    /* ? STAT ROW  -  each metric block */
     .h-stat-row {
       display: flex;
       align-items: center;
@@ -1300,7 +1300,7 @@
       border-bottom: none
     }
 
-    /* ↓ ICON BOX  -  change font-size to resize emoji */
+    /* ? ICON BOX  -  change font-size to resize emoji */
     .h-stat-icon {
       width: 48px;
       height: 48px;
@@ -1318,7 +1318,7 @@
       flex: 1
     }
 
-    /* ↓ BIG NUMBER  -  change font-size here to resize the animated number */
+    /* ? BIG NUMBER  -  change font-size here to resize the animated number */
     .h-stat-val {
       font-family: "Cormorant Garamond", serif;
       font-size: clamp(38px, 4.8vw, 56px);
@@ -1328,7 +1328,7 @@
       letter-spacing: -.01em
     }
 
-    /* ↓ DESCRIPTION TEXT  -  change font-size here to resize the label */
+    /* ? DESCRIPTION TEXT  -  change font-size here to resize the label */
     .h-stat-lbl {
       font-size: 12px;
       color: rgba(255, 255, 255, .75);
@@ -1479,7 +1479,7 @@
       color: var(--w)
     }
 
-    /* ═══ AWARD FEATURE SECTION ═══ */
+    /* --- AWARD FEATURE SECTION --- */
     #award-section {
       padding: 48px;
       background: var(--k);
@@ -1765,12 +1765,12 @@
       pointer-events: none
     }
 
-    /* ═══ IMPACT SECTION  -  "Impact of Our Work" grid ═══════════════════════
-   .imp-grid  → the 4-column grid container (1M+, 35+, 1100+, 93%)
-   .ic        → each individual cell inside the grid
-   .in        → the BIG number inside each cell  ← CHANGE font-size HERE to resize numbers
-   .il        → the label below each number      ← CHANGE font-size HERE to resize labels
-   ═══════════════════════════════════════════════════════════════════════ */
+    /* --- IMPACT SECTION  -  "Impact of Our Work" grid -----------------------
+   .imp-grid  ? the 4-column grid container (1M+, 35+, 1100+, 93%)
+   .ic        ? each individual cell inside the grid
+   .in        ? the BIG number inside each cell  ? CHANGE font-size HERE to resize numbers
+   .il        ? the label below each number      ? CHANGE font-size HERE to resize labels
+   ----------------------------------------------------------------------- */
     .imp-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1800,7 +1800,7 @@
       background: rgba(0, 0, 0, 0.25);
     }
 
-    /* ↓ IMPACT NUMBER SIZE  -  change font-size to make numbers bigger/smaller */
+    /* ? IMPACT NUMBER SIZE  -  change font-size to make numbers bigger/smaller */
     .in {
       font-family: "Cormorant Garamond", serif;
       font-size: clamp(42px, 5.5vw, 90px);
@@ -1811,7 +1811,7 @@
       margin-bottom: 10px
     }
 
-    /* ↓ IMPACT LABEL SIZE  -  change font-size to make "Lives Impacted" etc bigger/smaller */
+    /* ? IMPACT LABEL SIZE  -  change font-size to make "Lives Impacted" etc bigger/smaller */
     .il {
       font-size: 13.5px;
       color: rgba(255, 255, 255, 0.95);
@@ -1994,9 +1994,9 @@
       position: relative
     }
 
-    /* ──────────────────────────────────────────────
+    /* ----------------------------------------------
    SERVICES PAGE
-────────────────────────────────────────────── */
+---------------------------------------------- */
     .sp {
       padding: 96px 48px 72px
     }
@@ -2230,9 +2230,9 @@
       padding-bottom: 18px
     }
 
-    /* ──────────────────────────────────────────────
+    /* ----------------------------------------------
    PROJECTS PAGE
-────────────────────────────────────────────── */
+---------------------------------------------- */
     .pp {
       padding: 96px 48px 72px
     }
@@ -2411,9 +2411,9 @@
       font-weight: 500
     }
 
-    /* ──────────────────────────────────────────────
+    /* ----------------------------------------------
    TEAM PAGE
-────────────────────────────────────────────── */
+---------------------------------------------- */
     .tp {
       padding: 96px 48px 72px
     }
@@ -2599,7 +2599,7 @@
       text-shadow: 0 0 8px rgba(129, 183, 58, 0.4);
     }
 
-    /* ═══ TEAM BANNERS  -  Big group photos under "Meet the Team" ═══ */
+    /* --- TEAM BANNERS  -  Big group photos under "Meet the Team" --- */
     .team-banners {
       max-width: 1000px;
       margin: 40px auto 56px;
@@ -2653,13 +2653,13 @@
       }
     }
 
-    /* ═══ ALUMNI CARDS  -  "Where Our Alumni Work" grid (Team page + Home page) ═══
-   .ac-grid  → the grid container  -  change gap/grid-template-columns for layout
-   .ac       → each person card    -  change padding for card inner spacing
-   .ac-av    → circular initial avatar ← change width/height/font-size for avatar size
-   .ac h4    → person's full name      ← CHANGE font-size HERE to resize name text
-   .ac-co    → company name (BCG etc.) ← CHANGE font-size HERE to resize company text
-   ════════════════════════════════════════════════════════════════════════════ */
+    /* --- ALUMNI CARDS  -  "Where Our Alumni Work" grid (Team page + Home page) ---
+   .ac-grid  ? the grid container  -  change gap/grid-template-columns for layout
+   .ac       ? each person card    -  change padding for card inner spacing
+   .ac-av    ? circular initial avatar ? change width/height/font-size for avatar size
+   .ac h4    ? person's full name      ? CHANGE font-size HERE to resize name text
+   .ac-co    ? company name (BCG etc.) ? CHANGE font-size HERE to resize company text
+   ---------------------------------------------------------------------------- */
     .ac-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -2683,7 +2683,7 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4)
     }
 
-    /* ↓ AVATAR  -  change width/height to resize circle, font-size to resize the letter inside */
+    /* ? AVATAR  -  change width/height to resize circle, font-size to resize the letter inside */
     .ac-av {
       width: 120px;
       height: 120px;
@@ -2711,23 +2711,23 @@
       border-radius: 50%;
     }
 
-    /* ↓ PERSON NAME  -  currently 19px. Change this font-size to make names bigger or smaller */
+    /* ? PERSON NAME  -  currently 19px. Change this font-size to make names bigger or smaller */
     .ac-name {
       font-size: 15px;
       font-weight: 500;
       margin-bottom: 4px
     }
 
-    /* ↓ COMPANY TEXT  -  normalized to match subtext above */
+    /* ? COMPANY TEXT  -  normalized to match subtext above */
     .ac-co {
       font-size: 12px;
       color: var(--gl);
       font-weight: 600
     }
 
-    /* ──────────────────────────────────────────────
+    /* ----------------------------------------------
    CONTACT PAGE
-────────────────────────────────────────────── */
+---------------------------------------------- */
     .cp {
       padding: 96px 48px 72px;
       text-align: left;
@@ -2898,9 +2898,9 @@
       margin-top: 14px
     }
 
-    /* ──────────────────────────────────────────────
+    /* ----------------------------------------------
    RESOURCES PAGE
-────────────────────────────────────────────── */
+---------------------------------------------- */
     .rp {
       padding: 96px 48px 72px
     }
@@ -3812,7 +3812,7 @@
 <body>
   <div id="cur"></div>
 
-  <!-- ════════════ NAV ════════════ -->
+  <!-- ------------ NAV ------------ -->
   <nav id="nav">
     <a href="#" onclick="goto('home')" class="nav-logo">
       <img
@@ -3851,14 +3851,14 @@
 
   </div>
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      HOME
-══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+-------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        HOME PAGE
        Contains: Hero banner, marquee, three info cards, impact stats,
                  blog carousel, alumni companies grid, bottom CTA.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page on fade-active" id="page-home">
 
     <!-- HERO SECTION
@@ -4008,14 +4008,14 @@
       <div style="position:relative;z-index:2">
         <span class="slbl reveal">Impact of Our Work</span>
         <h2 class="sttl reveal d1">Numbers That Tell the Story</h2>
-        <!-- ═══ IMPACT STATS GRID ══════════════════════════════════════════════
+        <!-- --- IMPACT STATS GRID ----------------------------------------------
            Each .ic cell has:
-             .in  → the big number  (styled by .in CSS  -  font-size controls size)
-             .il  → the label below (styled by .il CSS  -  font-size controls size)
-           data-fmt="1M+" → displays as static text (no animation, avoids 0→1000000 weirdness)
-           data-to="30"   → animates from 0 to 30
-           data-suf="+"   → suffix appended after animation ends
-           ═══════════════════════════════════════════════════════════════════ -->
+             .in  ? the big number  (styled by .in CSS  -  font-size controls size)
+             .il  ? the label below (styled by .il CSS  -  font-size controls size)
+           data-fmt="1M+" ? displays as static text (no animation, avoids 0?1000000 weirdness)
+           data-to="30"   ? animates from 0 to 30
+           data-suf="+"   ? suffix appended after animation ends
+           ------------------------------------------------------------------- -->
         <div class="imp-grid">
           <div class="ic reveal">
             <div class="in"><span class="ctr" data-to="1000000" data-fmt="1M+">1M+</span></div>
@@ -4090,14 +4090,14 @@
 
   </div><!-- /home -->
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      SERVICES
-══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+-------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        SERVICES PAGE
        To add/edit a service: find class="sc-card" blocks inside this div.
        Each card has a title, description, and icon emoji.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page" id="page-services">
     <div class="sp">
       <div class="sp-head reveal">
@@ -4234,16 +4234,16 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      PROJECTS
-══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+-------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        PROJECTS PAGE
        Contains an interactive SVG world map + project cards on left/right.
        To add a new project card: copy any project card block inside
        class="proj-left" or class="proj-right" and update the details.
        To move a map pin: edit the circle coordinates inside the SVG.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page" id="page-projects">
     <div class="pp">
       <span class="slbl reveal" style="display:flex;justify-content:center">Portfolio</span>
@@ -5370,10 +5370,10 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      TEAM
-══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+-------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        TEAM PAGE
        Contains: President card, Executive Directors grid, Alumni grid.
 
@@ -5384,7 +5384,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           - To add photo: <img src="assets/firstname.jpg" onerror="this.remove()">
        3. ALUMNI: find class="ac-grid" and add/edit <div class="ac"> blocks.
           - Photo: put image in assets/ named "First Last.jpg", add <img> to ac-av.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page" id="page-team">
     <div class="tp">
       <div class="tp-head reveal">
@@ -5757,14 +5757,14 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      TESTIMONIALS
-  ══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+  -------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        TESTIMONIALS PAGE
        To add a testimonial: copy any <div class="test-card"> block,
        update the quote text, author name, and their organisation.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page" id="page-testimonials">
     <div class="tp">
       <div class="tp-head reveal">
@@ -5823,15 +5823,15 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      CONTACT
-══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+-------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        CONTACT PAGE
        To update contact details: find the email/phone/address text below.
        The form submissions are handled client-side (shows a success message).
        To connect to a real backend, update the handleForm() function in <script>.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page" id="page-contact">
     <div class="cp">
       <div style="text-align:center;margin-bottom:32px">
@@ -5841,6 +5841,32 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       </div>
       <div class="cp-grid">
         <div class="reveal">
+          <div class="ci-item">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4><a href="mailto:iitkgp@180dc.org">iitkgp@180dc.org</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Indian Institute of Technology Kharagpur<br>Kharagpur, West Bengal - 721302, India</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"/></svg>
+            </div>
+            <div>
+              <h4>Website</h4><a href="https://www.180dciitkgp.in" target="_blank">www.180dciitkgp.in</a>
+            </div>
+          </div>
+
           <div class="soc-row">
             <a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/home/" target="_blank" class="soc"
               aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -5911,14 +5937,14 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
+  <!-- --------------------------------------
      RESOURCES
-══════════════════════════════════════ -->
-  <!-- ══════════════════════════════════════════════════════════════════
+-------------------------------------- -->
+  <!-- ------------------------------------------------------------------
        RESOURCES PAGE
        To add a resource (blog link, toolkit, report): copy any
        <div class="res-card"> block and update the title, description, and link.
-       ══════════════════════════════════════════════════════════════════ -->
+       ------------------------------------------------------------------ -->
   <div class="page" id="page-resources">
     <div class="rp">
       <div style="text-align:center;margin-bottom:32px">
@@ -5992,7 +6018,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     </div>
   </div>
 
-  <!-- ════════════ FOOTER ════════════ -->
+  <!-- ------------ FOOTER ------------ -->
   <footer>
     <div class="fg2">
       <div class="fb">
@@ -6051,19 +6077,19 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     </div>
   </footer>
 
-  <!-- ══════════════════════════════════════════════════════════════════
+  <!-- ------------------------------------------------------------------
        JAVASCRIPT  -  ALL SITE LOGIC IS HERE
        Sections inside this script (search for the comment to jump to it):
-       • CURSOR        - custom green dot cursor behaviour
-       • NAV / TABS    - switching between pages (Home, Team, etc.)
-       • THREE.JS GLOBE- animated 3D globe in hero section
-       • REVEAL        - scroll-triggered fade-in animations
-       • COUNTERS      - animated number count-up on scroll
-       • FAQ           - accordion open/close on Services page
-       • BLOG CAROUSEL - left/right carousel for blog posts
-       • INTERACTIVE MAP - clickable SVG world map on Projects page
-       • CONTACT FORM  - form submission handler
-       ══════════════════════════════════════════════════════════════════ -->
+       � CURSOR        - custom green dot cursor behaviour
+       � NAV / TABS    - switching between pages (Home, Team, etc.)
+       � THREE.JS GLOBE- animated 3D globe in hero section
+       � REVEAL        - scroll-triggered fade-in animations
+       � COUNTERS      - animated number count-up on scroll
+       � FAQ           - accordion open/close on Services page
+       � BLOG CAROUSEL - left/right carousel for blog posts
+       � INTERACTIVE MAP - clickable SVG world map on Projects page
+       � CONTACT FORM  - form submission handler
+       ------------------------------------------------------------------ -->
   <script>
     /* Intercept mailto: links to open Gmail compose draft in another tab */
     document.addEventListener('click', function (e) {
@@ -6076,7 +6102,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       }
     });
 
-    /* ── THREE.JS 3D PARTICLE GLOBE */
+    /* -- THREE.JS 3D PARTICLE GLOBE */
     (function () {
       const container = document.getElementById("three-canvas");
       if (!container) return;
@@ -6209,7 +6235,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       });
     })();
 
-    /* ── CURSOR */
+    /* -- CURSOR */
     const cur = document.getElementById("cur");
     let cMouseX = -100, cMouseY = -100;
     let curX = -100, curY = -100;
@@ -6291,13 +6317,13 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       }
     });
 
-    /* ── NAV */
+    /* -- NAV */
     const nav = document.getElementById("nav");
     window.addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 30), { passive: true });
     document.getElementById("ham").addEventListener("click", () => { const m = document.getElementById("mobMenu"); m.classList.toggle("open") });
     function closeMob() { document.getElementById("mobMenu").classList.remove("open") }
 
-    /* ── PAGE ROUTING */
+    /* -- PAGE ROUTING */
     function goto(name) {
       document.querySelectorAll(".page").forEach(p => p.classList.remove("on", "fade-active"));
       const target = document.getElementById("page-" + name);
@@ -6339,7 +6365,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       }
     });
 
-    /* ── SCROLL REVEAL */
+    /* -- SCROLL REVEAL */
     const revealObserver = new IntersectionObserver(e => {
       e.forEach(x => {
         if (x.isIntersecting) {
@@ -6355,7 +6381,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     }
     observeReveal();
 
-    /* ── COUNTERS */
+    /* -- COUNTERS */
     function runCtr(el) {
       if (el.dataset.done) return; el.dataset.done = "1";
       const fmt = el.dataset.fmt;
@@ -6386,10 +6412,10 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     }
     initCounters(); // Execute immediately on page load so stats are observed!
 
-    /* ── FAQ */
+    /* -- FAQ */
     document.querySelectorAll(".fq").forEach(b => { b.addEventListener("click", () => { const it = b.closest(".fi"), open = it.classList.contains("open"); document.querySelectorAll(".fi").forEach(i => i.classList.remove("open")); if (!open) it.classList.add("open") }) });
 
-    /* ── BLOG CAROUSEL */
+    /* -- BLOG CAROUSEL */
     (function () {
       const track = document.getElementById("bcTrack"); if (!track) return;
       const cards = track.querySelectorAll(".bc");
@@ -6409,9 +6435,9 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
 
 
 
-    /* ── CONTACT FORM */
+    /* -- CONTACT FORM */
 
-    /* ── INTERACTIVE MAP */
+    /* -- INTERACTIVE MAP */
     function initInteractiveMap() {
       const container = document.querySelector('.india-map-layout');
       if (!container) return;
@@ -6559,7 +6585,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       initInteractiveMap();
     }, 150);
 
-    /* ── MOBILE OPTIMIZED TOAST & ERROR SYSTEM */
+    /* -- MOBILE OPTIMIZED TOAST & ERROR SYSTEM */
     function showToast(message, title = "Alert", type = "error", duration = 4500) {
       let container = document.getElementById("toastContainer");
       if (!container) {
@@ -6571,19 +6597,19 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
 
       const icons = {
         error: "",
-        success: "✓",
+        success: "?",
         warning: ""
       };
 
       const card = document.createElement("div");
       card.className = `toast-card ${type}`;
       card.innerHTML = `
-        <div class="toast-icon">${icons[type] || 'ℹ'}</div>
+        <div class="toast-icon">${icons[type] || '?'}</div>
         <div class="toast-content">
           <div class="toast-title">${title}</div>
           <div class="toast-desc">${message}</div>
         </div>
-        <button class="toast-close" onclick="this.parentElement.remove()">✕</button>
+        <button class="toast-close" onclick="this.parentElement.remove()">?</button>
       `;
 
       container.appendChild(card);
@@ -6708,6 +6734,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
 </body>
 
 </html>
+
 
 
 
